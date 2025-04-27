@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Arsenal+SC:ital,wght@0,400;0,700;1,400;1,700&family=Boldonse&family=Madimi+One&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Ribeye&display=swap');
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Lora', serif;
+  line-height: 1.5rem;
+}
+
+header {
+  background: #28a745
+   url(images/cardshop.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 25px;
+  height: 200px;
+}
+
+h1 {
+  color: #fff;
+  background: rgba(0,95,0, 0.65);
+  padding: 15px 25px;
+  margin-left: 100px;
+  transform: translateX(-135px) translateY(65px);
+  display: inline-block;
+  border-radius: 10px;
+}
+
+h1, h2 {
+  font-size: 4em;
+  line-height: 0.65em;
+  font-family: "Boldonse", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+section {
+  padding: 15px;
+  margin: 10px;
+}
+
+section + p {
+  margin-top: 100px;
+}
+
+section:nth-of-type(odd) {
+  background: #c9ecca;
+  color: #000;
+}
+
+section:nth-of-type(even) {
+  background: #c9ecca;
+  color: #000;
+
+}
+
+section:nth-of-type(3) {
+  background: #c9ecca;
+}
+
+footer {
+  background: #000;
+  padding: 5px 20px;
+    font-weight: bold;
+}
+
+.buy-box {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #28a745;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  text-align: center;
+  display: flex;
+  justify-content: center; 
+  align-items: center;             
+}
+
+.buy-box:hover {
+  background-color: #218838;
+}
+
+.nav {
+  display: flex;
+  justify-content: center; 
+  padding: 20px;
+  background-color: #333; 
+}
+
+.nav-button {
+  text-decoration: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #000;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+  background-color: #0056b3; 
+}
+
+footer {
+  color: white;
+  }
+
+footer ul  {
+  list-style-type: none;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 4fr 4fr 4fr; 
+  grid-template-rows: auto;
+  grid-template-areas:
+    "deckbox sleeves mats";
+}
+
+main section:nth-of-type(1) {
+  grid-area: deckbox;
+}
+
+main section:nth-of-type(2) {
+  grid-area: sleeves;
+}
+
+main section:nth-of-type(3) {
+  grid-area: mats;
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr; 
+    grid-template-areas:
+      "deckbox"
+      "sleeves"
+      "mats"; 
+  }
+  h1, h2 {
+    font-size: 2em; 
+  }
+  section {
+    margin: 5px; 
+    padding: 10px; 
+  }
+  footer {
+    text-align: center; 
+  }
+}
+img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 250px;
+}
